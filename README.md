@@ -13,4 +13,4 @@ This repo contains the code for the Lyft Back-End Engineering Program
 
 ### UML Diagram
 
-To be added
+![UML Diagram](./assets/UML Lyft.png)
