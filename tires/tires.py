@@ -1,6 +1,9 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
+class Tire(ABC):
+    def __init__(self, tire_sensor_data):
+        self.tire_sensor_data = tire_sensor_data
 
-class Tires(ABC):
-    def needs_service(self):
+    @abstractmethod
+    def tire_needs_service(self):
         pass
