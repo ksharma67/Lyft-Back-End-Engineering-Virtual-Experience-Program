@@ -1,10 +1,12 @@
-from tire import Tire
+from tires.tires import Tires
 
-class CarriganTire(Tire):
-    def __init__(self, tire_sensor_data):
-        super().__init__(tire_sensor_data)
-        self.tire_sensor_data = tire_sensor_data
 
-    def tire_needs_service(self):
-        # lambda function to find if a tire has any value greater than 0.9
-        return any(map(lambda current_tire: current_tire >= 0.9, self.tire_sensor_data))
+class CarriganTires(Tires):
+    def __init__(self, tire_wear):
+        self.tire_wear = tire_wear
+
+    def needs_service(self):
+        for tire in self.tire_wear:
+            if tire >= 0.9:
+                return True
+        return False
